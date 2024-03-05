@@ -25,7 +25,11 @@ const createTask = (task) => {
     let deleteBtn = document.createElement("button");
     deleteBtn.innerText = "delete";
     taskList.appendChild(deleteBtn);
-    console.log(taskList);
-    console.log(task);
-    console.log(todoList);
+    todoList.appendChild(taskList);
+    if (checkBox.checked) {
+        taskList.style.textDecoration = "line-through";
+    }
+    else {
+        taskList.style.textDecoration = "none";
+    }
 };
